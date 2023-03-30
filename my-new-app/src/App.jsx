@@ -35,14 +35,14 @@ function App() {
   ];
   const pokemon = pokemonList;
 
-  const [count, setCount] = useState(0);
-  let listpok = pokemon[count];
+  let [pokemonIndex, setpokemonIndex] = useState(0);
+  let listpok = pokemon[pokemonIndex];
 
-  const handleClickplus = (i) => {
-    setCount(count + 1);
-    i++;
-    i = pokemon.length ? (display = "false") : (display = "true");
-    console.log(pokemon.pop(-3));
+  const handleClickplus = () => {
+    setpokemonIndex(pokemonIndex + 1);
+  };
+  const handleclickless = () => {
+    setpokemonIndex(pokemonIndex - 1);
   };
 
   return (
@@ -52,7 +52,7 @@ function App() {
       </div>
       <div>
         <button onClick={handleClickplus}>suivant</button>
-        <button onClick>precedent</button>
+        <button onClick={handleclickless}>precedent</button>
       </div>
     </div>
   );
