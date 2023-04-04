@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 export default function PokemonCard({ pokemon }) {
   console.log(pokemon);
+  pokemon.name === "pikachu" ? alert("pika pikachu") : "";
 
   return (
     <figure>
